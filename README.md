@@ -1,11 +1,19 @@
 # Assignment
 
+- [Reminders](#reminders)
+  - [Asking ChatGPT for Help](#asking-chatgpt-for-help)
+  - [Be Okay With Being "Provisionally Complete"](#be-okay-with-being-provisionally-complete)
 - [Setup](#setup)
-- [Testing Your Code](#testing-your-code)
-  - [Submitting On Time](#submitting-on-time)
-  - [playground.js](#playgroundjs)
-  - [npm test](#npm-test)
-- [Questions](#questions)
+- [Short Response Questions](#short-response-questions)
+  - [Prompt 1](#prompt-1)
+  - [Prompt 2](#prompt-2)
+  - [Prompt 3](#prompt-3)
+- [From Scratch](#from-scratch)
+  - [Question 1 - Quadrilateral](#question-1---quadrilateral)
+  - [Question 2 - Rectangle](#question-2---rectangle)
+  - [Question 3 - Square](#question-3---square)
+- [Design Challenge](#design-challenge)
+
 
 ## Reminders
 
