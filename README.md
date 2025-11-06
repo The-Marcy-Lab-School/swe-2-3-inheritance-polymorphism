@@ -7,44 +7,142 @@
   - [npm test](#npm-test)
 - [Questions](#questions)
 
+## Reminders
+
+### Asking ChatGPT for Help
+
+If you’re stuck, you may use ChatGPT to clarify the assignment — but not to solve it for you. To do this, copy the meta-prompt below into ChatGPT along with the assignment question.
+
+> You are acting as a tutor. Your job is to explain what this coding question is asking, clarify confusing wording, and highlight the relevant concepts students need to know — but do not provide the full solution or code that directly answers the question. Instead, focus on rephrasing the problem in simpler terms, identifying what’s being tested, and suggesting what steps or thought processes might help. Ask guiding questions to ensure the student is thinking critically. Do not write the final function, algorithm, or code implementation.
+
+Be mindful of your AI usage on assignments. AI can be a great tool to help your learning but it can also be detrimental if you let it do too much of the thinking for you.
+
+### Be Okay With Being "Provisionally Complete"
+
+At Marcy, we will deem an assignment as "complete" if the solution passes at least **75%** of the automated tests. 
+
+However, we know many of you will feel the urge to hold off on submitting until your assignment feels 100% perfect. That drive for excellence is an asset!
+
+But perfectionism can also get in the way of learning — especially when we need to cover a lot in a short amount of time.
+
+That’s why we encourage you to be comfortable with being **“provisionally complete.”** This means:
+
+- Submitting your work even if it isn’t perfect yet
+- Treating submission as a checkpoint, not a finish line
+- Committing to return, revise, and improve later
+
+Learning to move forward with provisional completeness will help you make steady progress while still building the habit of continuous improvement.
+
 ## Setup
 
-For guidance on setting up and submitting this assignment, refer to the Marcy lab School Docs How-To guide for [Working with Short Response and Coding Assignments](https://marcylabschool.gitbook.io/marcy-lab-school-docs/fullstack-curriculum/how-tos/working-with-assignments#how-to-work-on-assignments).
+For guidance on setting up and submitting this assignment, refer to the Marcy lab School Docs How-To guide for [Working with Short Response and Coding Assignments](https://marcylabschool.gitbook.io/marcy-lab-school-docs/how-tos/working-with-assignments#how-to-work-on-assignments).
 
-After cloning your repository, make sure to run the following commands:
-
-```sh
-npm i
-git checkout -b draft
-npm t
-```
-
-## Testing Your Code
-
-### Submitting On Time
-
-You have to understand that "grades" don't exist at Marcy. We only need performance data in order to know how you're doing, and make sure the people who need help get it as quickly as they can. It's ok if you didn't finish by the deadline! Just show us what you have. We'll have office hours and reviews, and we want to know what you are all struggling with so we can use those meetings effectively. **This is not about grades, its about seeing what you know, and where we can help!**
-
-### playground.js
-
-The most straightforward way to test your code is to test your code by hand as you work. Invoke your functions and use `console.log()` to print out the results. Then, `cd` into the `src/` directory and use the `node <file_name>` command to run your JavaScript files.
-
-You can also create what's called a "playground" (or "sandbox") file where you import any code you need, and then mess around with that file. We've included one in the `src` directory so you can see it. Run that program using `node src/playground.js`.
-
-### npm test
-
-Before submitting your code, make sure you got things right by running the provided automated tests.
-
-You can do this using the commands:
+Here are some useful commands to remember.
 
 ```sh
+npm i                   # install dependencies
+git checkout -b draft   # switch to the draft branch before starting
+
 npm test # run the automated tests
 npm run test:w # run the automated tests and rerun them each time you save a change
+
+git add -A              # add a changed file to the staging area
+git commit -m 'message' # create a commit with the changes
+git push                # push the new commit to the remote repo
 ```
 
-You will know that you have "completed" an assignment once you have passed 75% or more of the automated tests!
+## Short Response Questions
 
-## Questions
+Short response questions can be found in the `src/short-response.md` file. Write your responses directly in that file! Do not forget to complete this part of the assignment.
+
+### Prompt 1
+
+Consider these classes:
+
+```js
+class Animal {
+  eat() { return "eating"; }
+}
+
+class Dog extends Animal {
+  bark() { return "woof"; }
+}
+
+class Puppy extends Dog {
+  play() { return "playing"; }
+}
+
+const rex = new Puppy();
+```
+
+Explain what happens when `rex.eat()` is invoked. In your answer, describe the role of **inheritance** and the **prototype chain**.
+
+### Prompt 2 
+
+Look at these classes:
+
+```js
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+  getDetails() {
+    return `${this.name} earns $${this.salary}`;
+  }
+}
+
+class Manager extends Employee {
+  constructor(name, salary, department) {
+    // YOUR CODE HERE
+  }
+  getDetails() {
+    // YOUR CODE HERE - should include both the Employee details 
+    // AND the department info
+  }
+}
+```
+
+Complete the `Manager` class by filling in the `constructor` and `getDetails` methods. Explain why you need to use `super` in each method and what would happen if you didn't use it.
+
+### Prompt 3
+
+Examine this code:
+
+```js
+class Shape {
+  getArea() {
+    return 0;
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+  getArea() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+class Square extends Shape {
+  constructor(side) {
+    super();
+    this.side = side;
+  }
+  getArea() {
+    return this.side ** 2;
+  }
+}
+
+const shapes = [new Circle(5), new Square(4), new Circle(3)];
+const totalArea = shapes.reduce((sum, shape) => sum + shape.getArea(), 0);
+```
+
+Explain how this code demonstrates **polymorphism**. Why can we call `getArea()` on each shape without checking what type of shape it is?
+
+## From Scratch
 
 ### Question 1 - Quadrilateral
 
