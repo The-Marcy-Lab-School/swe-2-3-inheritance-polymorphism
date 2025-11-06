@@ -132,6 +132,8 @@ In these problem sets, you'll build a hierarchy of classes with inheritance. Thi
 
 ### Problem Set 1: Shapes
 
+Create these classes in the `src/shapes.js` file.
+
 #### Shape
 
 Create a `Shape` class.
@@ -213,7 +215,7 @@ console.log(mySquare.getArea()); // 25
 
 ### Problem Set 2: Library System
 
-In this problem set, you'll practice using inheritance to build a hierarchy of library item classes.
+Create these classes in the `src/library-items.js` file.
 
 #### LibraryItem
 
