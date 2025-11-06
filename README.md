@@ -119,6 +119,9 @@ Examine this code:
 
 ```js
 class Shape {
+  constructor(type) {
+    this.type = type;
+  }
   getArea() {
     return 0;
   }
@@ -126,7 +129,7 @@ class Shape {
 
 class Circle extends Shape {
   constructor(radius) {
-    super();
+    super('circle');
     this.radius = radius;
   }
   getArea() {
@@ -136,7 +139,7 @@ class Circle extends Shape {
 
 class Square extends Shape {
   constructor(side) {
-    super();
+    super('square');
     this.side = side;
   }
   getArea() {
